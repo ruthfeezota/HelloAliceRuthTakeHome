@@ -3,7 +3,7 @@ import Layout from '../src/components/Layout';
 import Link from 'next/Link';
 export default function pokemon({ pokeman }) {
     return (
-        <Layout title={pokeman.name}> Name:
+        <Layout title={pokeman.name}> 
             <h1 className="text-4xl mb-2 text-center capitalize">
             {pokeman.name}
             </h1>
@@ -17,13 +17,13 @@ export default function pokemon({ pokeman }) {
                 <span className="font-bold mr-2">Weight:</span> {pokeman.weight}
             </p>
 
-            <p className="text-2xl mt-6 mb-2">Types:</p>
+            <p className="font-bold mr-2">Types:</p>
             {pokeman.types.map((type, index) => (
                 <p key="index">{type.type.name}</p>
             ))}
 
 
-            <p className="text-2xl mt-6 mb-2">Ability:</p>
+            <p className="font-bold mr-2">Ability:</p>
             {pokeman.abilities.map((ability, index) => (
                 <p key="index">{ability.ability.name}</p>
             ))}

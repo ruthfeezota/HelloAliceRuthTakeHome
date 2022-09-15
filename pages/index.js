@@ -3,16 +3,16 @@ import Layout from '../src/components/Layout';
 export default function Home({ pokemon }) {
     return (
         <Layout title="Ruth's NextJS Pokedex">
-            <h1 className="text-5xl mb-10 text-center ">Ruth's Nextjs Pokedex Home Assignment</h1>
+            <h1 className="text-4xl mb-10 text-center ">Ruth's Nextjs Pokedex Home Assignment</h1>
             <ul>
                 {pokemon.map((pokeman, index) => (
                     <li key={index}>
                         <Link href={`/pokemon?id=${index + 1}`}>
-                            <a className="border p-4 border-grey my-2 hover:shadow-md capitalize flex text-lg bg-gray-200 rounded-md">
+                            <a className="border p-5 border-grey my-2 hover:shadow-md capitalize flex text-lg bg-indigo-200 rounded-md">
                                 <img
                                     src={pokeman.image}
                                     alt={pokeman.name}
-                                    className="w-20 h-20 mr-3"
+                                    className="w-40 h-40 mr-5"
                                 />
                                 <span className="mr-2 font-bold">
                                     {index + 1}.
